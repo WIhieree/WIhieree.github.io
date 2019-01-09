@@ -352,6 +352,50 @@
 </blockquote>
 <p>Ps.set后可跟多个数据列进行更新数据</p>
 <h2 id="Oracle查询数据"><a href="#Oracle查询数据" class="headerlink" title="Oracle查询数据"></a>Oracle查询数据</h2><p>查询数据为Oracle增删查改最重要的一点</p>
+<h3 id="普通查询"><a href="#普通查询" class="headerlink" title="普通查询"></a>普通查询</h3><h4 id="语法-5"><a href="#语法-5" class="headerlink" title="语法"></a>语法</h4><p>select * from 表名; &nbsp; &nbsp; &nbsp; &nbsp;查询表格所有列的数据<br>select column from 表名; &nbsp; &nbsp; &nbsp; 查询指定列的数据<br>eg.查询表a全体学生的学号和姓名</p>
+<blockquote>
+<p>select sid,name from a;</p>
+</blockquote>
+<p>若查询结果有重复行，可使用distinct<br>eg.查询表a全体学生的学号和姓名，排除重复行</p>
+<blockquote>
+<p>select distinct sid,name from a;</p>
+</blockquote>
+<h5 id="查询日期"><a href="#查询日期" class="headerlink" title="查询日期"></a>查询日期</h5><p>日期列：是指数据类型为日期类型的列，如date类型<br>日期列的默认显示格式为DD-MON-RR，RR代表年份，而且只取年份的后两位数字<br>如果以简体中文显示日期结果，那么可以将会话的nls_language参数设置为simplified chinese<br>eg.设置简体中文日期格式</p>
+<blockquote>
+<p>alter session set nls_language = ‘SIMPLIFIED CHINESE’;</p>
+</blockquote>
+<p>eg.设置美国日期格式</p>
+<blockquote>
+<p>alter session set nls_language = ‘AMERICAN’;</p>
+</blockquote>
+<p>eg.设置特定日期格式</p>
+<blockquote>
+<p>alter session set nls_date_format = ‘YYYY/MM/DD’;</p>
+</blockquote>
+<h5 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h5><p>主要应用于数字和日期的列上，优先级为乘除，再到加减，有括号先算括号里面的<br>eg.查询表格a的年工资（原表格a只有月工资sal的基础上）</p>
+<blockquote>
+<p>select sal*12 from a;</p>
+</blockquote>
+<h5 id="判断空值-nbsp-is-null-nbsp-nbsp-is-not-null"><a href="#判断空值-nbsp-is-null-nbsp-nbsp-is-not-null" class="headerlink" title="判断空值 &nbsp; is null &nbsp; / &nbsp; is not null"></a>判断空值 &nbsp; is null &nbsp; / &nbsp; is not null</h5><p>用于检测列或表达式的结果是否为null，如果为null，则返回true，否则返回false<br>eg.判断表a姓名列是否为null</p>
+<blockquote>
+<p>select id,name,sex from a where name is null;<br>select id,name,sex from a where name is not null;</p>
+</blockquote>
+<h5 id="order-by语句排序-nbsp-asc（默认）-nbsp-nbsp-desc"><a href="#order-by语句排序-nbsp-asc（默认）-nbsp-nbsp-desc" class="headerlink" title="order by语句排序 &nbsp; asc（默认）&nbsp; / &nbsp; desc"></a>order by语句排序 &nbsp; asc（默认）&nbsp; / &nbsp; desc</h5><p>order by语句和其他语句一起使用时，必须位于最后，分组时不能使用where语句，应使用having语句<br>eg.从表格a选择姓名和电话，按照工资升序排列</p>
+<blockquote>
+<p>select name,cal from a order by sal asc;<br>select name,cal from a order bt sal; &nbsp; &nbsp; 默认升序</p>
+</blockquote>
+<p>eg.从表格a选择姓名和电话，按照工资降序排列</p>
+<blockquote>
+<p>select name,cal from a order by sal desc;</p>
+</blockquote>
+<p>eg.使用别名排序，从表格a选择姓名和电话，按照年收入升序降序排列</p>
+<blockquote>
+<p>select name,cal,sal*12 年收入 from a order by 年收入 desc;</p>
+</blockquote>
+<p>多列排序，首先按照第一列进行排序，相同的以第二列数据进行排序，以此类推；<br>eg.从表格a选择姓名和电话，按照工资升序、年龄降序排列</p>
+<blockquote>
+<p>select name,cal from a order by sal asc,age desc;</p>
+</blockquote>
 
           
         
