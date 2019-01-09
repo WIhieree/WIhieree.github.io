@@ -321,15 +321,37 @@
       
         
           
-            <h2 id="Oracle增加数据语句"><a href="#Oracle增加数据语句" class="headerlink" title="Oracle增加数据语句"></a>Oracle增加数据语句</h2><blockquote>
+            <h2 id="Oracle增加数据"><a href="#Oracle增加数据" class="headerlink" title="Oracle增加数据"></a>Oracle增加数据</h2><blockquote>
 <p>Ps. 下面语句中用 &nbsp; [ &nbsp; ] &nbsp; 括起来的即可以省略的部分</p>
 </blockquote>
 <h3 id="1-insert语句"><a href="#1-insert语句" class="headerlink" title="1.insert语句"></a>1.insert语句</h3><p>用于插入单行数据</p>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>insert &nbsp; [into] &nbsp; &lt;表名&gt; &nbsp; [列名] &nbsp; values &nbsp; &lt;列值&gt;<br>eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-10-12的数据</p>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>insert &nbsp; [into] &nbsp; &lt;表名&gt; &nbsp; [列名] &nbsp; values &nbsp; &lt;列值&gt;;<br>eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-10-12的数据</p>
 <blockquote>
-<p>insert a (姓名,性别,出生日期) values (‘齐天大圣’,’男’,’1999/10/12’)</p>
+<p>insert a (姓名,性别,出生日期) values (‘齐天大圣’,’男’,’1999/10/12’);</p>
 </blockquote>
 <p>Ps. 如果表a只有这三个列名，也可以省略列名，后面的values就会依次排序自动插入</p>
+<h3 id="2-insert-select语句"><a href="#2-insert-select语句" class="headerlink" title="2.insert select语句"></a>2.insert select语句</h3><p>把旧表格数据添加到新表格</p>
+<h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><p>insert &nbsp; into &nbsp; &lt;新表名&gt; &nbsp; &lt;列名&gt; &nbsp; select &nbsp; &lt;已有表格列名&gt; &nbsp; from &nbsp; &lt;已有表名&gt;;<br>eg.把旧表格的姓名，性别，地址数据复制到新表格</p>
+<blockquote>
+<p>insert into table_new (‘姓名’,’性别’,’地址’) select name,sex,address from table_old;</p>
+</blockquote>
+<h2 id="Oracle删除数据"><a href="#Oracle删除数据" class="headerlink" title="Oracle删除数据"></a>Oracle删除数据</h2><h3 id="delete语句"><a href="#delete语句" class="headerlink" title="delete语句"></a>delete语句</h3><p>删除表格里的某些数据</p>
+<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4><p>delete &nbsp; from &nbsp; &lt;表名[where&lt;删除条件&gt;];<br>eg.删除表格a中名为天天的行</p>
+<blockquote>
+<p>delete from a where name = ‘天天’;</p>
+</blockquote>
+<p>Ps.该方法为直接删除名为天天的整行数据</p>
+<h3 id="truncate-table语句"><a href="#truncate-table语句" class="headerlink" title="truncate table语句"></a>truncate table语句</h3><h4 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h4><p>truncate table &nbsp; &lt;表名&gt;;<br>eg.删除表a</p>
+<blockquote>
+<p>truncate table a;</p>
+</blockquote>
+<p>Ps.表格a所有行的数据将被删除，但是保留表格a的结构、列名等</p>
+<h2 id="Oracle修改数据"><a href="#Oracle修改数据" class="headerlink" title="Oracle修改数据"></a>Oracle修改数据</h2><h3 id="update语句"><a href="#update语句" class="headerlink" title="update语句"></a>update语句</h3><h4 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h4><p>update &nbsp; &lt;表名&gt; &nbsp; set &nbsp; &lt;列名=更新值&gt; &nbsp; [where&lt;更新条件&gt;];<br>eg.修改表a里天天的年龄为18</p>
+<blockquote>
+<p>update a set age = 18 where name = ‘天天’;</p>
+</blockquote>
+<p>Ps.set后可跟多个数据列进行更新数据</p>
+<h2 id="Oracle查询数据"><a href="#Oracle查询数据" class="headerlink" title="Oracle查询数据"></a>Oracle查询数据</h2><p>查询数据为Oracle增删查改最重要的一点</p>
 
           
         
