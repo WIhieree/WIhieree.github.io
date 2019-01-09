@@ -400,6 +400,32 @@
 <blockquote>
 <p>select <em> from a where name like ‘H%’;<br>eg.通配符_，模糊查询表格a名字第一个字符任意，中间是RT，后面任意<br>select </em> from a where name like ‘_RT%’;</p>
 </blockquote>
+<h5 id="between语句"><a href="#between语句" class="headerlink" title="between语句"></a>between语句</h5><p>between即在某个范围内进行查询<br>eg.查找表格a里年龄介于18到22之间的人</p>
+<blockquote>
+<p>select * from a where age between 18 to 22;</p>
+</blockquote>
+<h5 id="in语句"><a href="#in语句" class="headerlink" title="in语句"></a>in语句</h5><p>满足in()里其中一个<br>eg.查询表a仲address值为广东或者上海或者香港得记录，显示name字段</p>
+<blockquote>
+<p>select name from a where address in (‘广东’,’上海’,’香港’);</p>
+</blockquote>
+<h5 id="having语句"><a href="#having语句" class="headerlink" title="having语句"></a>having语句</h5><p>由于where只能在没有分组时使用，分组后只能使用having来限制条件<br>eg.查询表a里count(score)&gt;1的行，输出学号和平均成绩，按照学号进行升序排列</p>
+<blockquote>
+<p>select id as 学号, AVG(score) as 平均成绩 from a group by id having count(score)&gt;1;</p>
+</blockquote>
+<h3 id="多表连接查询"><a href="#多表连接查询" class="headerlink" title="多表连接查询"></a>多表连接查询</h3><p>left join：左连接，返回左表中所有的记录以及右表中连接字段相等的记录<br>right join：右连接，返回右表中所有的记录以及左表中连接字段相等的记录<br>inner join：内连接，又叫等值连接，只返回两个表中连接字段相等的行<br>full join：外连接，返回两个表中所有的行：left join + right join<br>cross join：结果是笛卡尔积，即第一个表的行数乘以第二个表的行数</p>
+<h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><p>在where子句中指定连接条件<br>eg.查询表a和表b中name字段相等的记录，并显示表a中的name字段和表b中的score字段</p>
+<blockquote>
+<p>select a.name,b.score from a,b where a.name = b.name;</p>
+</blockquote>
+<p>eg.采用内连接查询表a和表b中name字段相等的记录，并显示表a中的name字段和表b中的score字段</p>
+<blockquote>
+<p>select a.name,b.score from a inner join b on a.name=b.name;</p>
+</blockquote>
+<h4 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h4><p>left/right/full outer join ， 通常省略outer关键字，写成：left/right/full join<br>在左连接和右连接时都会以一张表a为基础表，该表的内容会全部显示，再加上表a和表b匹配的内容，如果表a的数据在表b中没有记录。那么在相关联的结果集行中列显示为空值null</p>
+<h5 id="左外连接查询"><a href="#左外连接查询" class="headerlink" title="左外连接查询"></a>左外连接查询</h5><p>eg.采用左外连接查询表a中code和表b中id相等的记录，并显示表a中的name字段和表b中的id字段、score字段</p>
+<blockquote>
+<p>select a.name,b.id,b.score from a left join b on a.code = b.id;</p>
+</blockquote>
 
           
         
