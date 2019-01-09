@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="WIhieree_blog">
 <meta property="og:description" content="Oracle增加数据 Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分  1.insert语句用于插入单行数据 语法insert &amp;nbsp; [into] &amp;nbsp; &amp;lt;表名&amp;gt; &amp;nbsp; [列名] &amp;nbsp; values &amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-09T08:01:02.811Z">
+<meta property="og:updated_time" content="2019-01-09T09:24:09.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle增删查改基础语句">
 <meta name="twitter:description" content="Oracle增加数据 Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分  1.insert语句用于插入单行数据 语法insert &amp;nbsp; [into] &amp;nbsp; &amp;lt;表名&amp;gt; &amp;nbsp; [列名] &amp;nbsp; values &amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-1">
@@ -321,38 +321,38 @@
       
 
       
-        <h2 id="Oracle增加数据"><a href="#Oracle增加数据" class="headerlink" title="Oracle增加数据"></a>Oracle增加数据</h2><blockquote>
+        <h1 id="Oracle增加数据"><a href="#Oracle增加数据" class="headerlink" title="Oracle增加数据"></a>Oracle增加数据</h1><blockquote>
 <p>Ps. 下面语句中用 &nbsp; [ &nbsp; ] &nbsp; 括起来的即可以省略的部分</p>
 </blockquote>
-<h3 id="1-insert语句"><a href="#1-insert语句" class="headerlink" title="1.insert语句"></a>1.insert语句</h3><p>用于插入单行数据</p>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>insert &nbsp; [into] &nbsp; &lt;表名&gt; &nbsp; [列名] &nbsp; values &nbsp; &lt;列值&gt;;<br>eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-10-12的数据</p>
+<h2 id="1-insert语句"><a href="#1-insert语句" class="headerlink" title="1.insert语句"></a>1.insert语句</h2><p>用于插入单行数据</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>insert &nbsp; [into] &nbsp; &lt;表名&gt; &nbsp; [列名] &nbsp; values &nbsp; &lt;列值&gt;;<br>eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-10-12的数据</p>
 <blockquote>
 <p>insert a (姓名,性别,出生日期) values (‘齐天大圣’,’男’,’1999/10/12’);</p>
 </blockquote>
 <p>Ps. 如果表a只有这三个列名，也可以省略列名，后面的values就会依次排序自动插入</p>
-<h3 id="2-insert-select语句"><a href="#2-insert-select语句" class="headerlink" title="2.insert select语句"></a>2.insert select语句</h3><p>把旧表格数据添加到新表格</p>
-<h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><p>insert &nbsp; into &nbsp; &lt;新表名&gt; &nbsp; &lt;列名&gt; &nbsp; select &nbsp; &lt;已有表格列名&gt; &nbsp; from &nbsp; &lt;已有表名&gt;;<br>eg.把旧表格的姓名，性别，地址数据复制到新表格</p>
+<h2 id="2-insert-select语句"><a href="#2-insert-select语句" class="headerlink" title="2.insert select语句"></a>2.insert select语句</h2><p>把旧表格数据添加到新表格</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>insert &nbsp; into &nbsp; &lt;新表名&gt; &nbsp; &lt;列名&gt; &nbsp; select &nbsp; &lt;已有表格列名&gt; &nbsp; from &nbsp; &lt;已有表名&gt;;<br>eg.把旧表格的姓名，性别，地址数据复制到新表格</p>
 <blockquote>
 <p>insert into table_new (‘姓名’,’性别’,’地址’) select name,sex,address from table_old;</p>
 </blockquote>
-<h2 id="Oracle删除数据"><a href="#Oracle删除数据" class="headerlink" title="Oracle删除数据"></a>Oracle删除数据</h2><h3 id="delete语句"><a href="#delete语句" class="headerlink" title="delete语句"></a>delete语句</h3><p>删除表格里的某些数据</p>
-<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4><p>delete &nbsp; from &nbsp; &lt;表名[where&lt;删除条件&gt;];<br>eg.删除表格a中名为天天的行</p>
+<h1 id="Oracle删除数据"><a href="#Oracle删除数据" class="headerlink" title="Oracle删除数据"></a>Oracle删除数据</h1><h2 id="delete语句"><a href="#delete语句" class="headerlink" title="delete语句"></a>delete语句</h2><p>删除表格里的某些数据</p>
+<h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><p>delete &nbsp; from &nbsp; &lt;表名[where&lt;删除条件&gt;];<br>eg.删除表格a中名为天天的行</p>
 <blockquote>
 <p>delete from a where name = ‘天天’;</p>
 </blockquote>
 <p>Ps.该方法为直接删除名为天天的整行数据</p>
-<h3 id="truncate-table语句"><a href="#truncate-table语句" class="headerlink" title="truncate table语句"></a>truncate table语句</h3><h4 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h4><p>truncate table &nbsp; &lt;表名&gt;;<br>eg.删除表a</p>
+<h2 id="truncate-table语句"><a href="#truncate-table语句" class="headerlink" title="truncate table语句"></a>truncate table语句</h2><h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><p>truncate table &nbsp; &lt;表名&gt;;<br>eg.删除表a</p>
 <blockquote>
 <p>truncate table a;</p>
 </blockquote>
 <p>Ps.表格a所有行的数据将被删除，但是保留表格a的结构、列名等</p>
-<h2 id="Oracle修改数据"><a href="#Oracle修改数据" class="headerlink" title="Oracle修改数据"></a>Oracle修改数据</h2><h3 id="update语句"><a href="#update语句" class="headerlink" title="update语句"></a>update语句</h3><h4 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h4><p>update &nbsp; &lt;表名&gt; &nbsp; set &nbsp; &lt;列名=更新值&gt; &nbsp; [where&lt;更新条件&gt;];<br>eg.修改表a里天天的年龄为18</p>
+<h1 id="Oracle修改数据"><a href="#Oracle修改数据" class="headerlink" title="Oracle修改数据"></a>Oracle修改数据</h1><h2 id="update语句"><a href="#update语句" class="headerlink" title="update语句"></a>update语句</h2><h3 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h3><p>update &nbsp; &lt;表名&gt; &nbsp; set &nbsp; &lt;列名=更新值&gt; &nbsp; [where&lt;更新条件&gt;];<br>eg.修改表a里天天的年龄为18</p>
 <blockquote>
 <p>update a set age = 18 where name = ‘天天’;</p>
 </blockquote>
 <p>Ps.set后可跟多个数据列进行更新数据</p>
-<h2 id="Oracle查询数据"><a href="#Oracle查询数据" class="headerlink" title="Oracle查询数据"></a>Oracle查询数据</h2><p>查询数据为Oracle增删查改最重要的一点</p>
-<h3 id="普通查询"><a href="#普通查询" class="headerlink" title="普通查询"></a>普通查询</h3><h4 id="语法-5"><a href="#语法-5" class="headerlink" title="语法"></a>语法</h4><p>select * from 表名; &nbsp; &nbsp; &nbsp; &nbsp;查询表格所有列的数据<br>select column from 表名; &nbsp; &nbsp; &nbsp; 查询指定列的数据<br>eg.查询表a全体学生的学号和姓名</p>
+<h1 id="Oracle查询数据"><a href="#Oracle查询数据" class="headerlink" title="Oracle查询数据"></a>Oracle查询数据</h1><p>查询数据为Oracle增删查改最重要的一点</p>
+<h2 id="普通查询"><a href="#普通查询" class="headerlink" title="普通查询"></a>普通查询</h2><h3 id="语法-5"><a href="#语法-5" class="headerlink" title="语法"></a>语法</h3><p>select * from 表名; &nbsp; &nbsp; &nbsp; &nbsp;查询表格所有列的数据<br>select column from 表名; &nbsp; &nbsp; &nbsp; 查询指定列的数据<br>eg.查询表a全体学生的学号和姓名</p>
 <blockquote>
 <p>select sid,name from a;</p>
 </blockquote>
@@ -360,7 +360,7 @@
 <blockquote>
 <p>select distinct sid,name from a;</p>
 </blockquote>
-<h5 id="查询日期"><a href="#查询日期" class="headerlink" title="查询日期"></a>查询日期</h5><p>日期列：是指数据类型为日期类型的列，如date类型<br>日期列的默认显示格式为DD-MON-RR，RR代表年份，而且只取年份的后两位数字<br>如果以简体中文显示日期结果，那么可以将会话的nls_language参数设置为simplified chinese<br>eg.设置简体中文日期格式</p>
+<h3 id="查询日期"><a href="#查询日期" class="headerlink" title="查询日期"></a>查询日期</h3><p>日期列：是指数据类型为日期类型的列，如date类型<br>日期列的默认显示格式为DD-MON-RR，RR代表年份，而且只取年份的后两位数字<br>如果以简体中文显示日期结果，那么可以将会话的nls_language参数设置为simplified chinese<br>eg.设置简体中文日期格式</p>
 <blockquote>
 <p>alter session set nls_language = ‘SIMPLIFIED CHINESE’;</p>
 </blockquote>
@@ -372,15 +372,15 @@
 <blockquote>
 <p>alter session set nls_date_format = ‘YYYY/MM/DD’;</p>
 </blockquote>
-<h5 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h5><p>主要应用于数字和日期的列上，优先级为乘除，再到加减，有括号先算括号里面的<br>eg.查询表格a的年工资（原表格a只有月工资sal的基础上）</p>
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>主要应用于数字和日期的列上，优先级为乘除，再到加减，有括号先算括号里面的<br>eg.查询表格a的年工资（原表格a只有月工资sal的基础上）</p>
 <blockquote>
 <p>select sal*12 from a;</p>
 </blockquote>
-<h5 id="判断空值-nbsp-is-null-nbsp-nbsp-is-not-null"><a href="#判断空值-nbsp-is-null-nbsp-nbsp-is-not-null" class="headerlink" title="判断空值 &nbsp; is null &nbsp; / &nbsp; is not null"></a>判断空值 &nbsp; is null &nbsp; / &nbsp; is not null</h5><p>用于检测列或表达式的结果是否为null，如果为null，则返回true，否则返回false<br>eg.判断表a姓名列是否为null</p>
+<h3 id="判断空值-nbsp-is-null-nbsp-nbsp-is-not-null"><a href="#判断空值-nbsp-is-null-nbsp-nbsp-is-not-null" class="headerlink" title="判断空值 &nbsp; is null &nbsp; / &nbsp; is not null"></a>判断空值 &nbsp; is null &nbsp; / &nbsp; is not null</h3><p>用于检测列或表达式的结果是否为null，如果为null，则返回true，否则返回false<br>eg.判断表a姓名列是否为null</p>
 <blockquote>
 <p>select id,name,sex from a where name is null;<br>select id,name,sex from a where name is not null;</p>
 </blockquote>
-<h5 id="order-by语句排序-nbsp-asc（默认）-nbsp-nbsp-desc"><a href="#order-by语句排序-nbsp-asc（默认）-nbsp-nbsp-desc" class="headerlink" title="order by语句排序 &nbsp; asc（默认）&nbsp; / &nbsp; desc"></a>order by语句排序 &nbsp; asc（默认）&nbsp; / &nbsp; desc</h5><p>order by语句和其他语句一起使用时，必须位于最后，分组时不能使用where语句，应使用having语句<br>eg.从表格a选择姓名和电话，按照工资升序排列</p>
+<h3 id="order-by语句排序-nbsp-asc（默认）-nbsp-nbsp-desc"><a href="#order-by语句排序-nbsp-asc（默认）-nbsp-nbsp-desc" class="headerlink" title="order by语句排序 &nbsp; asc（默认）&nbsp; / &nbsp; desc"></a>order by语句排序 &nbsp; asc（默认）&nbsp; / &nbsp; desc</h3><p>order by语句和其他语句一起使用时，必须位于最后，分组时不能使用where语句，应使用having语句<br>eg.从表格a选择姓名和电话，按照工资升序排列</p>
 <blockquote>
 <p>select name,cal from a order by sal asc;<br>select name,cal from a order bt sal; &nbsp; &nbsp; 默认升序</p>
 </blockquote>
@@ -396,24 +396,24 @@
 <blockquote>
 <p>select name,cal from a order by sal asc,age desc;</p>
 </blockquote>
-<h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><h4 id="语法-6"><a href="#语法-6" class="headerlink" title="语法"></a>语法</h4><h5 id="like语句"><a href="#like语句" class="headerlink" title="like语句"></a>like语句</h5><p>当使用like语句进行模糊查询时，需要使用通配符%和_<br>通配符%：用于表示0个或多个字符<br>通配符_:用于表示单个字符<br>eg.通配符%，模糊查询表格a名字第一个字符是H后面任意</p>
+<h2 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h2><h3 id="like语句"><a href="#like语句" class="headerlink" title="like语句"></a>like语句</h3><p>当使用like语句进行模糊查询时，需要使用通配符%和_<br>通配符%：用于表示0个或多个字符<br>通配符_:用于表示单个字符<br>eg.通配符%，模糊查询表格a名字第一个字符是H后面任意</p>
 <blockquote>
 <p>select <em> from a where name like ‘H%’;<br>eg.通配符_，模糊查询表格a名字第一个字符任意，中间是RT，后面任意<br>select </em> from a where name like ‘_RT%’;</p>
 </blockquote>
-<h5 id="between语句"><a href="#between语句" class="headerlink" title="between语句"></a>between语句</h5><p>between即在某个范围内进行查询<br>eg.查找表格a里年龄介于18到22之间的人</p>
+<h3 id="between语句"><a href="#between语句" class="headerlink" title="between语句"></a>between语句</h3><p>between即在某个范围内进行查询<br>eg.查找表格a里年龄介于18到22之间的人</p>
 <blockquote>
 <p>select * from a where age between 18 to 22;</p>
 </blockquote>
-<h5 id="in语句"><a href="#in语句" class="headerlink" title="in语句"></a>in语句</h5><p>满足in()里其中一个<br>eg.查询表a仲address值为广东或者上海或者香港得记录，显示name字段</p>
+<h3 id="in语句"><a href="#in语句" class="headerlink" title="in语句"></a>in语句</h3><p>满足in()里其中一个<br>eg.查询表a仲address值为广东或者上海或者香港得记录，显示name字段</p>
 <blockquote>
 <p>select name from a where address in (‘广东’,’上海’,’香港’);</p>
 </blockquote>
-<h5 id="having语句"><a href="#having语句" class="headerlink" title="having语句"></a>having语句</h5><p>由于where只能在没有分组时使用，分组后只能使用having来限制条件<br>eg.查询表a里count(score)&gt;1的行，输出学号和平均成绩，按照学号进行升序排列</p>
+<h3 id="having语句"><a href="#having语句" class="headerlink" title="having语句"></a>having语句</h3><p>由于where只能在没有分组时使用，分组后只能使用having来限制条件<br>eg.查询表a里count(score)&gt;1的行，输出学号和平均成绩，按照学号进行升序排列</p>
 <blockquote>
 <p>select id as 学号, AVG(score) as 平均成绩 from a group by id having count(score)&gt;1;</p>
 </blockquote>
-<h3 id="多表连接查询"><a href="#多表连接查询" class="headerlink" title="多表连接查询"></a>多表连接查询</h3><p>left join：左连接，返回左表中所有的记录以及右表中连接字段相等的记录<br>right join：右连接，返回右表中所有的记录以及左表中连接字段相等的记录<br>inner join：内连接，又叫等值连接，只返回两个表中连接字段相等的行<br>full join：外连接，返回两个表中所有的行：left join + right join<br>cross join：结果是笛卡尔积，即第一个表的行数乘以第二个表的行数</p>
-<h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><p>在where子句中指定连接条件<br>eg.查询表a和表b中name字段相等的记录，并显示表a中的name字段和表b中的score字段</p>
+<h2 id="多表连接查询"><a href="#多表连接查询" class="headerlink" title="多表连接查询"></a>多表连接查询</h2><p>left join：左连接，返回左表中所有的记录以及右表中连接字段相等的记录<br>right join：右连接，返回右表中所有的记录以及左表中连接字段相等的记录<br>inner join：内连接，又叫等值连接，只返回两个表中连接字段相等的行<br>full join：外连接，返回两个表中所有的行：left join + right join<br>cross join：结果是笛卡尔积，即第一个表的行数乘以第二个表的行数</p>
+<h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><p>在where子句中指定连接条件<br>eg.查询表a和表b中name字段相等的记录，并显示表a中的name字段和表b中的score字段</p>
 <blockquote>
 <p>select a.name,b.score from a,b where a.name = b.name;</p>
 </blockquote>
@@ -421,15 +421,40 @@
 <blockquote>
 <p>select a.name,b.score from a inner join b on a.name=b.name;</p>
 </blockquote>
-<h4 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h4><p>left/right/full outer join ， 通常省略outer关键字，写成：left/right/full join<br>在左连接和右连接时都会以一张表a为基础表，该表的内容会全部显示，再加上表a和表b匹配的内容，如果表a的数据在表b中没有记录。那么在相关联的结果集行中列显示为空值null</p>
-<h5 id="左外连接查询"><a href="#左外连接查询" class="headerlink" title="左外连接查询"></a>左外连接查询</h5><p>eg.采用左外连接查询表a中code和表b中id相等的记录，并显示表a中的name字段和表b中的id字段、score字段</p>
+<h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><p>left/right/full outer join ， 通常省略outer关键字，写成：left/right/full join<br>在左连接和右连接时都会以一张表a为基础表，该表的内容会全部显示，再加上表a和表b匹配的内容，如果表a的数据在表b中没有记录。那么在相关联的结果集行中列显示为空值null</p>
+<h4 id="左外连接查询"><a href="#左外连接查询" class="headerlink" title="左外连接查询"></a>左外连接查询</h4><p>eg.采用左外连接查询表a中code和表b中id相等的记录，并显示表a中的name字段和表b中的id字段、score字段</p>
 <blockquote>
 <p>select a.name,b.id,b.score from a left join b on a.code = b.id;</p>
 </blockquote>
-<h5 id="右外连接查询"><a href="#右外连接查询" class="headerlink" title="右外连接查询"></a>右外连接查询</h5><p>eg.采用右外连接查询表a中code和表b中id相等的记录，并显示表a中的name字段和表b中的id字段、score字段</p>
+<h4 id="右外连接查询"><a href="#右外连接查询" class="headerlink" title="右外连接查询"></a>右外连接查询</h4><p>eg.采用右外连接查询表a中code和表b中id相等的记录，并显示表a中的name字段和表b中的id字段、score字段</p>
 <blockquote>
 <p>select a.name,b.id,b.score from a right join b on a.code = b.id;</p>
 </blockquote>
+<h2 id="复杂查询"><a href="#复杂查询" class="headerlink" title="复杂查询"></a>复杂查询</h2><h3 id="数据分组"><a href="#数据分组" class="headerlink" title="数据分组"></a>数据分组</h3><p>max,min,avg,sum,count<br>eg.显示表a所有员工中最高工资和最低工资</p>
+<blockquote>
+<p>select max(sal),min(sal) from a;</p>
+</blockquote>
+<p>eg.显示表a所有员工中最高工资和最高工资的人是谁</p>
+<blockquote>
+<p>select name,sal from a where sal = (select max(sal) from a);</p>
+</blockquote>
+<p>eg.显示表a工资高于平均工资的员工信息</p>
+<blockquote>
+<p>select * from a where sal &gt; (select avg(sal) from a);</p>
+</blockquote>
+<h4 id="group-by-和-having-子句"><a href="#group-by-和-having-子句" class="headerlink" title="group by 和 having 子句"></a>group by 和 having 子句</h4><p>eg.显示表a每个部门的平均工资和最高工资</p>
+<blockquote>
+<p>select avg(sal),max(sal),deptno from a gruop by deptno;</p>
+</blockquote>
+<p>eg.显示表a每个部门的每种岗位的平均工资和最高工资</p>
+<blockquote>
+<p>select avg(sal),max(sal),deptno,job from a gruop by deptno,job;</p>
+</blockquote>
+<p>eg.显示表a平均工资低于2000的部门号和它的平均工资</p>
+<blockquote>
+<p>select deptno,avg(sal) from a group by deptno having avg(sal) &lt; 2000;</p>
+</blockquote>
+<h4 id="数据分组总结"><a href="#数据分组总结" class="headerlink" title="数据分组总结"></a>数据分组总结</h4><p>分组函数只能出现在选择列表、having、order by子句中<br>如果在select语句中同时包含有group by、having、order by那么他们的优先级是group by,having,order by<br>在选择列中如果有列、表达式和分组函数，那这些列和表达式必须有一个出现在group by子句中</p>
 <h1 id="待更新······"><a href="#待更新······" class="headerlink" title="待更新······"></a>待更新······</h1>
       
     </div>
@@ -596,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle增加数据"><span class="nav-number">1.</span> <span class="nav-text">Oracle增加数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-insert语句"><span class="nav-number">1.1.</span> <span class="nav-text">1.insert语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">1.1.1.</span> <span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-insert-select语句"><span class="nav-number">1.2.</span> <span class="nav-text">2.insert select语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle删除数据"><span class="nav-number">2.</span> <span class="nav-text">Oracle删除数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#delete语句"><span class="nav-number">2.1.</span> <span class="nav-text">delete语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-2"><span class="nav-number">2.1.1.</span> <span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#truncate-table语句"><span class="nav-number">2.2.</span> <span class="nav-text">truncate table语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-3"><span class="nav-number">2.2.1.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle修改数据"><span class="nav-number">3.</span> <span class="nav-text">Oracle修改数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#update语句"><span class="nav-number">3.1.</span> <span class="nav-text">update语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-4"><span class="nav-number">3.1.1.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle查询数据"><span class="nav-number">4.</span> <span class="nav-text">Oracle查询数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通查询"><span class="nav-number">4.1.</span> <span class="nav-text">普通查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-5"><span class="nav-number">4.1.1.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#查询日期"><span class="nav-number">4.1.1.1.</span> <span class="nav-text">查询日期</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#算术运算符"><span class="nav-number">4.1.1.2.</span> <span class="nav-text">算术运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#判断空值-nbsp-is-null-nbsp-nbsp-is-not-null"><span class="nav-number">4.1.1.3.</span> <span class="nav-text">判断空值   is null   /   is not null</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#order-by语句排序-nbsp-asc（默认）-nbsp-nbsp-desc"><span class="nav-number">4.1.1.4.</span> <span class="nav-text">order by语句排序   asc（默认）  /   desc</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模糊查询"><span class="nav-number">4.2.</span> <span class="nav-text">模糊查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-6"><span class="nav-number">4.2.1.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#like语句"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">like语句</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#between语句"><span class="nav-number">4.2.1.2.</span> <span class="nav-text">between语句</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#in语句"><span class="nav-number">4.2.1.3.</span> <span class="nav-text">in语句</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#having语句"><span class="nav-number">4.2.1.4.</span> <span class="nav-text">having语句</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多表连接查询"><span class="nav-number">4.3.</span> <span class="nav-text">多表连接查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内连接"><span class="nav-number">4.3.1.</span> <span class="nav-text">内连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#外连接"><span class="nav-number">4.3.2.</span> <span class="nav-text">外连接</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#左外连接查询"><span class="nav-number">4.3.2.1.</span> <span class="nav-text">左外连接查询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#右外连接查询"><span class="nav-number">4.3.2.2.</span> <span class="nav-text">右外连接查询</span></a></li></ol></li></ol></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#待更新······"><span class="nav-number"></span> <span class="nav-text">待更新······</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle增加数据"><span class="nav-number">1.</span> <span class="nav-text">Oracle增加数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-insert语句"><span class="nav-number">1.1.</span> <span class="nav-text">1.insert语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">1.1.1.</span> <span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-insert-select语句"><span class="nav-number">1.2.</span> <span class="nav-text">2.insert select语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle删除数据"><span class="nav-number">2.</span> <span class="nav-text">Oracle删除数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#delete语句"><span class="nav-number">2.1.</span> <span class="nav-text">delete语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法-2"><span class="nav-number">2.1.1.</span> <span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#truncate-table语句"><span class="nav-number">2.2.</span> <span class="nav-text">truncate table语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法-3"><span class="nav-number">2.2.1.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle修改数据"><span class="nav-number">3.</span> <span class="nav-text">Oracle修改数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#update语句"><span class="nav-number">3.1.</span> <span class="nav-text">update语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法-4"><span class="nav-number">3.1.1.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle查询数据"><span class="nav-number">4.</span> <span class="nav-text">Oracle查询数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#普通查询"><span class="nav-number">4.1.</span> <span class="nav-text">普通查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法-5"><span class="nav-number">4.1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询日期"><span class="nav-number">4.1.2.</span> <span class="nav-text">查询日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算术运算符"><span class="nav-number">4.1.3.</span> <span class="nav-text">算术运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断空值-nbsp-is-null-nbsp-nbsp-is-not-null"><span class="nav-number">4.1.4.</span> <span class="nav-text">判断空值   is null   /   is not null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#order-by语句排序-nbsp-asc（默认）-nbsp-nbsp-desc"><span class="nav-number">4.1.5.</span> <span class="nav-text">order by语句排序   asc（默认）  /   desc</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊查询"><span class="nav-number">4.2.</span> <span class="nav-text">模糊查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#like语句"><span class="nav-number">4.2.1.</span> <span class="nav-text">like语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#between语句"><span class="nav-number">4.2.2.</span> <span class="nav-text">between语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in语句"><span class="nav-number">4.2.3.</span> <span class="nav-text">in语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#having语句"><span class="nav-number">4.2.4.</span> <span class="nav-text">having语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多表连接查询"><span class="nav-number">4.3.</span> <span class="nav-text">多表连接查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内连接"><span class="nav-number">4.3.1.</span> <span class="nav-text">内连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外连接"><span class="nav-number">4.3.2.</span> <span class="nav-text">外连接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#左外连接查询"><span class="nav-number">4.3.2.1.</span> <span class="nav-text">左外连接查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#右外连接查询"><span class="nav-number">4.3.2.2.</span> <span class="nav-text">右外连接查询</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂查询"><span class="nav-number">4.4.</span> <span class="nav-text">复杂查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据分组"><span class="nav-number">4.4.1.</span> <span class="nav-text">数据分组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#group-by-和-having-子句"><span class="nav-number">4.4.1.1.</span> <span class="nav-text">group by 和 having 子句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据分组总结"><span class="nav-number">4.4.1.2.</span> <span class="nav-text">数据分组总结</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#待更新······"><span class="nav-number">5.</span> <span class="nav-text">待更新······</span></a></li></ol></div>
             
 
           </div>
