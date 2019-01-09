@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="WIhieree_blog">
 <meta property="og:description" content="Oracle增加数据 Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分  1.insert语句用于插入单行数据 语法insert &amp;nbsp; [into] &amp;nbsp; &amp;lt;表名&amp;gt; &amp;nbsp; [列名] &amp;nbsp; values &amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-09T03:50:55.166Z">
+<meta property="og:updated_time" content="2019-01-09T03:57:03.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle增删查改基础语句">
 <meta name="twitter:description" content="Oracle增加数据 Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分  1.insert语句用于插入单行数据 语法insert &amp;nbsp; [into] &amp;nbsp; &amp;lt;表名&amp;gt; &amp;nbsp; [列名] &amp;nbsp; values &amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-1">
@@ -396,7 +396,10 @@
 <blockquote>
 <p>select name,cal from a order by sal asc,age desc;</p>
 </blockquote>
-<h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><h4 id="语法-6"><a href="#语法-6" class="headerlink" title="语法"></a>语法</h4><h5 id="like语句"><a href="#like语句" class="headerlink" title="like语句"></a>like语句</h5><p>当使用like语句进行模糊查询时，需要使用通配符%和_</p>
+<h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><h4 id="语法-6"><a href="#语法-6" class="headerlink" title="语法"></a>语法</h4><h5 id="like语句"><a href="#like语句" class="headerlink" title="like语句"></a>like语句</h5><p>当使用like语句进行模糊查询时，需要使用通配符%和_<br>通配符%：用于表示0个或多个字符<br>通配符_:用于表示单个字符<br>eg.通配符%，模糊查询表格a名字第一个字符是H后面任意</p>
+<blockquote>
+<p>select <em> from a where name like ‘H%’;<br>eg.通配符_，模糊查询表格a名字第一个字符任意，中间是RT，后面任意<br>select </em> from a where name like ‘_RT%’;</p>
+</blockquote>
 
       
     </div>
