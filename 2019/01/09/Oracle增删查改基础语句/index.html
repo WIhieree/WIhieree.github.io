@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Oracle增加数据Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分 1.insert语句用于插入单行数据 语法123insert &amp;amp;nbsp; [into] &amp;amp;nbsp; &amp;lt;表名&amp;gt; &amp;amp;nbsp; [列名] &amp;amp;nbsp; values &amp;amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓名">
+<meta name="description" content="Oracle增加数据Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分 1.insert语句用于插入单行数据 语法1234insert &amp;amp;nbsp; [into] &amp;amp;nbsp; &amp;lt;表名&amp;gt; &amp;amp;nbsp; [列名] &amp;amp;nbsp; values &amp;amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓">
 <meta name="keywords" content="Oracle,增删查改语句">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle增删查改基础语句">
 <meta property="og:url" content="https://wihieree.github.io/2019/01/09/Oracle增删查改基础语句/index.html">
 <meta property="og:site_name" content="WIhieree_blog">
-<meta property="og:description" content="Oracle增加数据Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分 1.insert语句用于插入单行数据 语法123insert &amp;amp;nbsp; [into] &amp;amp;nbsp; &amp;lt;表名&amp;gt; &amp;amp;nbsp; [列名] &amp;amp;nbsp; values &amp;amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓名">
+<meta property="og:description" content="Oracle增加数据Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分 1.insert语句用于插入单行数据 语法1234insert &amp;amp;nbsp; [into] &amp;amp;nbsp; &amp;lt;表名&amp;gt; &amp;amp;nbsp; [列名] &amp;amp;nbsp; values &amp;amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-23T07:04:29.778Z">
+<meta property="og:updated_time" content="2019-01-23T07:07:29.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle增删查改基础语句">
-<meta name="twitter:description" content="Oracle增加数据Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分 1.insert语句用于插入单行数据 语法123insert &amp;amp;nbsp; [into] &amp;amp;nbsp; &amp;lt;表名&amp;gt; &amp;amp;nbsp; [列名] &amp;amp;nbsp; values &amp;amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓名">
+<meta name="twitter:description" content="Oracle增加数据Ps. 下面语句中用 &amp;nbsp; [ &amp;nbsp; ] &amp;nbsp; 括起来的即可以省略的部分 1.insert语句用于插入单行数据 语法1234insert &amp;amp;nbsp; [into] &amp;amp;nbsp; &amp;lt;表名&amp;gt; &amp;amp;nbsp; [列名] &amp;amp;nbsp; values &amp;amp;nbsp; &amp;lt;列值&amp;gt;;eg.往表格a里插入一行姓">
 
 
 
@@ -323,24 +323,14 @@
       
         <h1 id="Oracle增加数据"><a href="#Oracle增加数据" class="headerlink" title="Oracle增加数据"></a>Oracle增加数据</h1><p>Ps. 下面语句中用 &nbsp; [ &nbsp; ] &nbsp; 括起来的即可以省略的部分</p>
 <h2 id="1-insert语句"><a href="#1-insert语句" class="headerlink" title="1.insert语句"></a>1.insert语句</h2><p>用于插入单行数据</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">insert &amp;nbsp; [into] &amp;nbsp; &lt;表名&gt; &amp;nbsp; [列名] &amp;nbsp; values &amp;nbsp; &lt;列值&gt;;</span><br><span class="line">eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-10-12的数据</span><br><span class="line">insert a (姓名,性别,出生日期) values (&apos;齐天大圣&apos;,&apos;男&apos;,&apos;1999/10/12&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">insert &amp;nbsp; [into] &amp;nbsp; &lt;表名&gt; &amp;nbsp; [列名] &amp;nbsp; values &amp;nbsp; &lt;列值&gt;;</span><br><span class="line"></span><br><span class="line">eg.往表格a里插入一行姓名为齐天大圣，性别男，出生日期为1999-10-12的数据</span><br><span class="line">insert a (姓名,性别,出生日期) values (&apos;齐天大圣&apos;,&apos;男&apos;,&apos;1999/10/12&apos;);</span><br></pre></td></tr></table></figure>
 <p>Ps. 如果表a只有这三个列名，也可以省略列名，后面的values就会依次排序自动插入</p>
 <h2 id="2-insert-select语句"><a href="#2-insert-select语句" class="headerlink" title="2.insert select语句"></a>2.insert select语句</h2><p>把旧表格数据添加到新表格</p>
-<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>insert &nbsp; into &nbsp; &lt;新表名&gt; &nbsp; &lt;列名&gt; &nbsp; select &nbsp; &lt;已有表格列名&gt; &nbsp; from &nbsp; &lt;已有表名&gt;;<br>eg.把旧表格的姓名，性别，地址数据复制到新表格</p>
-<blockquote>
-<p>insert into table_new (‘姓名’,’性别’,’地址’) select name,sex,address from table_old;</p>
-</blockquote>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">insert &amp;nbsp; into &amp;nbsp; &lt;新表名&gt; &amp;nbsp; &lt;列名&gt; &amp;nbsp; select &amp;nbsp; &lt;已有表格列名&gt; &amp;nbsp; from &amp;nbsp; &lt;已有表名&gt;;</span><br><span class="line"></span><br><span class="line">eg.把旧表格的姓名，性别，地址数据复制到新表格</span><br><span class="line">insert into table_new (&apos;姓名&apos;,&apos;性别&apos;,&apos;地址&apos;) select name,sex,address from table_old;</span><br></pre></td></tr></table></figure>
 <h1 id="Oracle删除数据"><a href="#Oracle删除数据" class="headerlink" title="Oracle删除数据"></a>Oracle删除数据</h1><h2 id="delete语句"><a href="#delete语句" class="headerlink" title="delete语句"></a>delete语句</h2><p>删除表格里的某些数据</p>
-<h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><p>delete &nbsp; from &nbsp; &lt;表名[where&lt;删除条件&gt;];<br>eg.删除表格a中名为天天的行</p>
-<blockquote>
-<p>delete from a where name = ‘天天’;</p>
-</blockquote>
+<h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">delete &amp;nbsp; from &amp;nbsp; &lt;表名[where&lt;删除条件&gt;];</span><br><span class="line"></span><br><span class="line">eg.删除表格a中名为天天的行</span><br><span class="line">delete from a where name = &apos;天天&apos;;</span><br></pre></td></tr></table></figure>
 <p>Ps.该方法为直接删除名为天天的整行数据</p>
-<h2 id="truncate-table语句"><a href="#truncate-table语句" class="headerlink" title="truncate table语句"></a>truncate table语句</h2><h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table &amp;nbsp; &lt;表名&gt;;</span><br></pre></td></tr></table></figure>
-<p>eg.删除表a</p>
-<blockquote>
-<p>truncate table a;</p>
-</blockquote>
+<h2 id="truncate-table语句"><a href="#truncate-table语句" class="headerlink" title="truncate table语句"></a>truncate table语句</h2><h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">truncate table &amp;nbsp; &lt;表名&gt;;</span><br><span class="line"></span><br><span class="line">eg.删除表a</span><br><span class="line">truncate table a;</span><br></pre></td></tr></table></figure>
 <p>Ps.表格a所有行的数据将被删除，但是保留表格a的结构、列名等;</p>
 <h3 id="truncate-与-delete-区别"><a href="#truncate-与-delete-区别" class="headerlink" title="truncate 与 delete 区别"></a>truncate 与 delete 区别</h3><p>truncate 是 DDL 语句， delete 是 DML 语句；<br>truncate 比 delete 删除速度快，效率高，但是 truncate 语句不能带 where 条件，只能删除全部数据，而 delete 可删除部分数据。</p>
 <h1 id="Oracle修改数据"><a href="#Oracle修改数据" class="headerlink" title="Oracle修改数据"></a>Oracle修改数据</h1><h2 id="update语句"><a href="#update语句" class="headerlink" title="update语句"></a>update语句</h2><h3 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h3><p>update &nbsp; &lt;表名&gt; &nbsp; set &nbsp; &lt;列名=更新值&gt; &nbsp; [where&lt;更新条件&gt;];<br>eg.修改表a里天天的年龄为18</p>
