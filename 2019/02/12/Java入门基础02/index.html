@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="WIhieree_blog">
 <meta property="og:description" content="标识符12345678910111213141516171819202122232425262728293031323334353637/*	关于 Java 语言当中的标识符		1. 什么是标识符			- 在 java 源程序当中凡是程序员又权利自己命名的单词都是标识符			- 标识符可以标识的元素：				类名				方法名				变量名				接口名				常量名				······		2.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-12T06:49:58.610Z">
+<meta property="og:updated_time" content="2019-02-12T07:41:42.911Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java入门基础02">
 <meta name="twitter:description" content="标识符12345678910111213141516171819202122232425262728293031323334353637/*	关于 Java 语言当中的标识符		1. 什么是标识符			- 在 java 源程序当中凡是程序员又权利自己命名的单词都是标识符			- 标识符可以标识的元素：				类名				方法名				变量名				接口名				常量名				······		2.">
@@ -323,6 +323,16 @@
       
         <h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	关于 Java 语言当中的标识符</span><br><span class="line"></span><br><span class="line">		1. 什么是标识符</span><br><span class="line">			- 在 java 源程序当中凡是程序员又权利自己命名的单词都是标识符</span><br><span class="line">			- 标识符可以标识的元素：</span><br><span class="line">				类名</span><br><span class="line">				方法名</span><br><span class="line">				变量名</span><br><span class="line">				接口名</span><br><span class="line">				常量名</span><br><span class="line">				······</span><br><span class="line"></span><br><span class="line">		2. 标识符的命名规则（必须按照该规则，规则不对会报错）</span><br><span class="line">			- 只能由数字、字母、下划线、美元符号组成，不能含有其他符号</span><br><span class="line">			- 不能以数字开头</span><br><span class="line">			- 严格区分大小写</span><br><span class="line">			- 关键字不能做标识符</span><br><span class="line">			- 理论上无长度限制，但不要太长</span><br><span class="line"></span><br><span class="line">		3. 标识符的命名规范（约定成俗，不属于语法，不报错）</span><br><span class="line">			- 见名知意</span><br><span class="line">			- 遵守驼峰命名方式</span><br><span class="line">				eg. SystemColor</span><br><span class="line">					UserDataHandler</span><br><span class="line">			- 类名、接口名：首字母大写，后面每个单词首字母大写</span><br><span class="line">			- 变量名、方法名：首字母小写，后面每个单词首字母大写</span><br><span class="line">			- 常量名：全部大写</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">public class IdentifierTest01&#123; // IdentifierTest01 是一个类名，名字可以修改</span><br><span class="line"></span><br><span class="line">		// main 是一个方法名</span><br><span class="line">		public static void main(String[] args)&#123;  // args 是一个变量名</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1><p>关键字不需要单独记忆，从编写程序的过程中记忆<br>可在下面网址查看相关关键字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.w3cschool.cn/java/java-keywords.html</span><br></pre></td></tr></table></figure></p>
+<h1 id="字面值"><a href="#字面值" class="headerlink" title="字面值"></a>字面值</h1><ul>
+<li>10 &nbsp;、&nbsp; 100 &nbsp; &nbsp; 属于整数型字面值</li>
+<li>3.14  &nbsp; &nbsp; 属于浮点型字面值</li>
+<li>“abc”&nbsp;、&nbsp; “卢夏天” &nbsp; &nbsp; 属于字符串型字面值</li>
+<li>“a”   &nbsp; &nbsp; 属于字符型字面值</li>
+<li>true &nbsp;、&nbsp; false &nbsp; &nbsp; 属于布尔型字面值<blockquote>
+<p>Ps. Java 语言当中所有的字符串型字面值必须使用双引号括起来，双引号是半角<br>Java 语言当中所有的字符型字面值必须使用单引号括起来，单引号是半角<br>字面值就是数据<br>字面值是 Java 源程序的组成部分之一，包括标识符和关键字，它们都是 Java 源程序的组成部分。<br>数据在现实世界当中是分门别类的，所以数据在计算机编程语言当中也是有类型的</p>
+</blockquote>
+</li>
+</ul>
 
       
     </div>
@@ -489,7 +499,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符"><span class="nav-number">1.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关键字"><span class="nav-number">2.</span> <span class="nav-text">关键字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符"><span class="nav-number">1.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关键字"><span class="nav-number">2.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字面值"><span class="nav-number">3.</span> <span class="nav-text">字面值</span></a></li></ol></div>
             
 
           </div>
