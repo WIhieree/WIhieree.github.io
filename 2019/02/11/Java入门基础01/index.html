@@ -88,7 +88,7 @@
 <meta property="og:description" content="前期准备可参考下面的网址安装 Java 和 搭配环境1234Win：https://blog.csdn.net/tozeroblog/article/details/80324790Mac：https://blog.csdn.net/vvv_110/article/details/72897142 Java 语言特性（开源、免费、纯面向对象、跨平台） 简单性 相对而言，Java 中不再支持多继承，">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://wihieree.github.io/2019/02/11/Java入门基础01/1.png">
-<meta property="og:updated_time" content="2019-02-13T02:18:36.703Z">
+<meta property="og:updated_time" content="2019-02-18T06:24:37.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java入门基础01">
 <meta name="twitter:description" content="前期准备可参考下面的网址安装 Java 和 搭配环境1234Win：https://blog.csdn.net/tozeroblog/article/details/80324790Mac：https://blog.csdn.net/vvv_110/article/details/72897142 Java 语言特性（开源、免费、纯面向对象、跨平台） 简单性 相对而言，Java 中不再支持多继承，">
@@ -353,7 +353,7 @@
 </li>
 </ul>
 <h1 id="开始第一个-Java-程序"><a href="#开始第一个-Java-程序" class="headerlink" title="开始第一个 Java 程序"></a>开始第一个 Java 程序</h1><p>Hello World<br>我使用的是 IntelliJ IDEA ，可自行查找相关 IntelliJ 的使用教程学习后再进行下面的案例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class HelloWorld&#123;</span><br><span class="line">      public static void main(String[] args)&#123;</span><br><span class="line">            System.out.println(&quot;Hello World&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>上面的案例也可以新建一个 HelloWorld.java 文件，输入上面案例的代码，在命令窗口 cmd 执行以下两行代码<br>Ps.<br>一个 java 源文件当中可以定义多个 class ， public class 不是必须的<br>使用 public class 时候，类名必须与 .java 源文件名一致，区分大小写， public class 只能有一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javac HelloWorld.java 文件所在的绝对路径/相对路径</span><br><span class="line">java HelloWorld</span><br></pre></td></tr></table></figure></p>
+<p>上面的案例也可以新建一个 HelloWorld.java 文件，输入上面案例的代码，在命令窗口 cmd 执行以下两行代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javac HelloWorld.java 文件所在的绝对路径/相对路径</span><br><span class="line">java HelloWorld</span><br></pre></td></tr></table></figure></p>
 <img src="/2019/02/11/Java入门基础01/1.png">
 <p>输出 HelloWorld 即表示成功执行</p>
 <h2 id="HelloWorld-程序解释"><a href="#HelloWorld-程序解释" class="headerlink" title="HelloWorld 程序解释"></a>HelloWorld 程序解释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">public 表示公开的</span><br><span class="line">class 表示定义一个类</span><br><span class="line">HelloWorld 表示一个类名</span><br><span class="line">则 public class HelloWorld 表示定义一个公开的类，名为 HelloWorld</span><br><span class="line">*/</span><br><span class="line">public class HelloWorld&#123;</span><br><span class="line"></span><br><span class="line">  // 类体中不允许直接编写 java 语句，除声明变量之外</span><br><span class="line">  /*</span><br><span class="line">      public 表示公开的</span><br><span class="line">      static 表示静态的</span><br><span class="line">      void 表示空</span><br><span class="line">      main 表示方法名是 main</span><br><span class="line">      (String[] args) 是一个 main 方法的形式参数列表</span><br><span class="line">      以下是 SUN 公司规定的固定编写方式，是一个“主方法”，程序的执行入口</span><br><span class="line">  */</span><br><span class="line">  public static void main(String[] args)&#123;</span><br><span class="line">      // 表示定义一个公开的静态的主方法</span><br><span class="line">      // args 可以随便写</span><br><span class="line">      // 即 public static void main(String[] Wihieree)&#123;</span><br><span class="line"></span><br><span class="line">      // 向控制台输出一段信息</span><br><span class="line">    System.out.println(&quot;Hello World&quot;);</span><br><span class="line">      // java 语句以 &quot;;&quot; 终止</span><br><span class="line">      // java 中所有的 &quot;字符串&quot; 都使用双引号括起来</span><br><span class="line"></span><br><span class="line">      // 再次输出信息</span><br><span class="line">    System.out.println(&quot;Hello Wihieree&quot;);</span><br><span class="line"></span><br><span class="line">      // 输出中文</span><br><span class="line">    System.out.println(&quot;卢夏天&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -375,7 +375,13 @@
 <li>学会搭配好系统环境编译和运行代码</li>
 <li>自己可以独立编写 HelloWorld 程序，编译并运行</li>
 <li>养成代码注释习惯</li>
-<li>理解 public class 和 class 的区别</li>
+<li>理解 public class 和 class 的区别<ul>
+<li>一个 java 源文件当中可以定义多个 class ， public class 不是必须的</li>
+<li>一个 class 会定义生成一个 .class 字节码文件</li>
+<li>使用 public class 时候，类名必须与 .java 源文件名一致，区分大小写， public class 只能有一个</li>
+<li>每一个 class 当中都可以编写 main 方法，都可以设定程序的入口（每一个 class 里必须有主方法，没有主方法会在运行阶段报错）</li>
+</ul>
+</li>
 </ul>
 
       
