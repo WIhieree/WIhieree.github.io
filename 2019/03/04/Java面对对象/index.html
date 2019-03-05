@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="WIhieree_blog">
 <meta property="og:description" content="面对对象是 Java 语言的核心机制，最重要的内容，Java 语言的特色 面向过程和面对对象的区别面向过程 优点：对业务逻辑比较简单的程序，可以达到快速开发，前期投入成本较低  缺点：采用面向过程的方式开发很难解决非常复杂的业务逻辑，另外面向过程的方式导致软件元素之间的“耦合度”非常高，只要其中一环出现问题，整个系统收到影响，导致最终的软件“扩展力”差。另外，由于没有独立体的概念，所以无法达到组件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-04T03:53:32.257Z">
+<meta property="og:updated_time" content="2019-03-05T01:05:20.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面对对象">
 <meta name="twitter:description" content="面对对象是 Java 语言的核心机制，最重要的内容，Java 语言的特色 面向过程和面对对象的区别面向过程 优点：对业务逻辑比较简单的程序，可以达到快速开发，前期投入成本较低  缺点：采用面向过程的方式开发很难解决非常复杂的业务逻辑，另外面向过程的方式导致软件元素之间的“耦合度”非常高，只要其中一环出现问题，整个系统收到影响，导致最终的软件“扩展力”差。另外，由于没有独立体的概念，所以无法达到组件">
@@ -369,6 +369,38 @@
 <li>通过类就可以创建对象</li>
 <li>有了对象之后，可以让对象直接协作起来形成一个系统</li>
 </ul>
+<p>从类到对象称为实例化 / Instance；从对象到类称为抽象</p>
+<h3 id="类的重点"><a href="#类的重点" class="headerlink" title="类的重点"></a>类的重点</h3><ul>
+<li>类描述的是对象的共同特征</li>
+<li>共同特征例如：身高特征<br>这个身高特征在访问的时候，必须先创建对象，通过对象去访问这个特征，因为这个特征具体的某个<br>对象上之后，值不同。有的对象身高 1.80，有得对象身高 1.95</li>
+</ul>
+<p>一个类主要描述的是 状态 + 动作</p>
+<ul>
+<li>状态信息：名字、身高、性别、年龄</li>
+<li>动作信息：吃、唱歌、跳舞、学习<br>状态对应的是一个类的属性；动作对应的是一个类的方法</li>
+</ul>
+<p>当状态和动作当具体到某个对象上之后，发现最终的结果可能不一样</p>
+<p>对象和对象之间有共同特征，但是具体到对象之后有数据的差异</p>
+<h1 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h1><p>语法结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] class 类名&#123;</span><br><span class="line">	属性;</span><br><span class="line">	方法;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>学生类，描述所有学生对象的共同特征：</p>
+<ul>
+<li>学号</li>
+<li>名字</li>
+<li>性别</li>
+<li>年龄</li>
+<li>住址<br>….</li>
+</ul>
+<p>学生对象的动作信息：</p>
+<ul>
+<li>吃饭</li>
+<li>睡觉</li>
+<li>学习</li>
+<li>玩</li>
+<li>唱歌</li>
+<li>跳舞<br>….</li>
+</ul>
+<p>属性通常是采用一个变量的形式来完成定义的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int no;</span><br><span class="line">int age;</span><br><span class="line">String name;</span><br><span class="line">String address;</span><br><span class="line">boolean sex;</span><br></pre></td></tr></table></figure></p>
+<p>eg.创建一个 Student.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//定义一个类，类名 Student</span><br><span class="line">//Student 是一个类，代表了所有的学生对象，是一个学生模板</span><br><span class="line">public class Student&#123;//定义一个公开的类，起名 Student</span><br><span class="line">	</span><br><span class="line">	//属性（描述的是对象的状态信息）</span><br><span class="line">	//属性通常采用变量的方式来定义</span><br><span class="line">	//在类体当中，方法体之外定义的变量被称为“成员变量”</span><br><span class="line">	//成员变量没有赋值，系统赋默认值：0</span><br><span class="line">	</span><br><span class="line">	//学号</span><br><span class="line">	int no;</span><br><span class="line">	</span><br><span class="line">	//姓名</span><br><span class="line">	String name;</span><br><span class="line">	</span><br><span class="line">	//性别</span><br><span class="line">	boolean sex;</span><br><span class="line">	</span><br><span class="line">	//年龄</span><br><span class="line">	int age;</span><br><span class="line">	</span><br><span class="line">	//住址</span><br><span class="line">	String address;</span><br><span class="line">	</span><br><span class="line">	//方法</span><br><span class="line">	//方法描述的是对象的动作信息</span><br><span class="line">	//当前例子就只描述了属性，不描述方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -535,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面向过程和面对对象的区别"><span class="nav-number">1.</span> <span class="nav-text">面向过程和面对对象的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向过程"><span class="nav-number">1.1.</span> <span class="nav-text">面向过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">1.2.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象的三大特征"><span class="nav-number">1.2.1.</span> <span class="nav-text">面向对象的三大特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类和对象的概念"><span class="nav-number">1.3.</span> <span class="nav-text">类和对象的概念</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面向过程和面对对象的区别"><span class="nav-number">1.</span> <span class="nav-text">面向过程和面对对象的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向过程"><span class="nav-number">1.1.</span> <span class="nav-text">面向过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">1.2.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象的三大特征"><span class="nav-number">1.2.1.</span> <span class="nav-text">面向对象的三大特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类和对象的概念"><span class="nav-number">1.3.</span> <span class="nav-text">类和对象的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类的重点"><span class="nav-number">1.3.1.</span> <span class="nav-text">类的重点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类的定义"><span class="nav-number">2.</span> <span class="nav-text">类的定义</span></a></li></ol></div>
             
 
           </div>
